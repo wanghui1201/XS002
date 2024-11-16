@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人介绍卡片</title>
+    <style>
+        /* 设置全局样式，定义字体、背景颜色和页面布局 */
+        body {
+            font-family: 'Arial', sans-serif; /* 使用无衬线字体，简洁清晰 */
+            background-color: #f0f8ff; /* 浅蓝色背景，营造友好氛围 */
+            display: flex; /* 使用 Flexbox 布局，使卡片居中 */
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            height: 100vh; /* 页面高度占满整个视窗 */
+            margin: 0; /* 去掉页面默认边距 */
+        }
+
+        /* 卡片的基础样式 */
+        .card {
+            width: 600px; /* 固定卡片宽度 */
+            background-color: #fff; /* 白色背景 */
+            border-radius: 15px; /* 圆角边框 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+            display: flex; /* 使用 Flexbox 实现左右布局 */
+            overflow: hidden; /* 隐藏溢出内容 */
+            transition: transform 0.3s ease; /* 添加平滑缩放动画效果 */
+        }
+
+        /* 鼠标悬停时，卡片略微放大 */
+        .card:hover {
+            transform: scale(1.05); /* 放大 5% */
+        }
+
+        /* 左侧图片区域样式 */
+        .card-image {
+            width: 40%; /* 左侧图片区域占卡片宽度的 40% */
+            background-color: #6ac1d2; /* 蓝绿色背景 */
+            display: flex; /* 使用 Flexbox 居中图片 */
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* 图片样式 */
+        .profile-pic {
+            width: 100%; /* 图片宽度适应区域 */
+            max-width: 150px; /* 最大宽度 */
+            border-radius: 50%; /* 圆形图片 */
+            border: 4px solid #fff; /* 添加白色边框 */
+        }
+
+        /* 右侧内容区域样式 */
+        .card-content {
+            width: 60%; /* 右侧内容区域占卡片宽度的 60% */
+            padding: 20px;
+            text-align: left; /* 左对齐文字 */
+        }
+
+        /* 卡片头部样式 */
+        .card-header {
+            font-size: 1.8em; /* 字体大小 */
+            color: #6ac1d2; /* 蓝绿色字体 */
+            font-weight: bold; /* 加粗字体 */
+            margin-bottom: 15px; /* 添加底部间距 */
+        }
+
+        /* 文字信息样式 */
+        .info {
+            margin: 10px 0; /* 上下间距 */
+            font-size: 1em; /* 正常字体大小 */
+            color: #333; /* 深灰色字体 */
+        }
+
+        /* 高亮文本样式 */
+        .highlight {
+            color: #6ac1d2; /* 蓝绿色字体 */
+            font-weight: bold; /* 加粗字体 */
+        }
+
+        /* 卡片底部信息 */
+        .card-footer {
+            margin-top: 20px;
+            font-size: 0.9em; /* 较小的字体 */
+            color: #555; /* 中灰色字体 */
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- 左侧图片区域 -->
+        <div class="card-image">
+            <img src="https://th.bing.com/th/id/R.fe6360807bbe42bda4cacf96a352b673?rik=3i%2fiUtAB3PjKfg&pid=ImgRaw&r=0&sres=1&sresct=1" alt="头像" class="profile-pic">
+        </div>
+        <!-- 右侧文字内容 -->
+        <div class="card-content">
+            <div class="card-header">个人介绍</div>
+            <p class="info">🎂 我今年 <span class="highlight">8岁</span>，是个活泼好动的小朋友！</p>
+            <p class="info">🏠 我住在 <span class="highlight">北京市</span>，家里有爸爸妈妈和一只可爱的猫咪。</p>
+            <p class="info">📚 在学校里，我最喜欢的科目是 <span class="highlight">数学</span>，因为可以动脑筋解难题。</p>
+            <p class="info">🎨 我的兴趣爱好是 <span class="highlight">画画、拼乐高</span>，有时候也喜欢写点小故事。</p>
+            <p class="info">🎮 我最爱的游戏是 <span class="highlight">超级马里奥</span>，也喜欢玩益智类的小游戏。</p>
+            <p class="info">✈️ 我梦想长大后可以成为一名 <span class="highlight">科学家</span>，发明有趣的东西！</p>
+            <div class="card-footer">希望能和你成为好朋友！😊</div>
+        </div>
+    </div>
+</body>
+</html>
